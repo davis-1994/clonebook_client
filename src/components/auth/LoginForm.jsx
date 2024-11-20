@@ -42,7 +42,7 @@ const LoginForm = () => {
         Log In
       </button>
       <div className='divider m-0' />
-      <Link href='/auth' className='w-full'>
+      <Link href='/register' className='w-full'>
         <button className='btn btn-secondary w-full text-white'>
           Create new account
         </button>
