@@ -1,3 +1,5 @@
+import Header from '@/components/user/Header';
+
 export const metadata = {
   title: 'Clonebook | User',
   description: 'This is full stack Next.js practice project',
@@ -5,9 +7,9 @@ export const metadata = {
 
 export default async function UserLayout({ children }) {
   return (
-    <html lang='en' data-theme='winter' className='bg-base-100'>
-      <body>{children}</body>
-    </html>
+    <>
+      <Header />
+      <div className='mt-5'>{children}</div>
+    </>
   );
-  // return children;
 }
