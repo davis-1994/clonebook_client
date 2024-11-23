@@ -2,9 +2,12 @@
 
 import { useActionState } from 'react';
 
-import { register } from '@/actions/auth-actions';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+
+import { register } from '@/actions/auth-actions';
+
+import Alert from '@/components/general/Alert';
 
 const Register = () => {
   const [state, formAction, isPending] = useActionState(register, {});
@@ -19,6 +22,7 @@ const Register = () => {
         className='flex justify-center items-center flex-col md:gap-4 gap-2 rounded-md md:min-w-[400px] bg-base-200 md:p-10 p-4 shadow-md border border-neutral-300'
         action={formAction}
       >
+        <Alert message={state?.message} error={state?.error} />
         <input
           type='text'
           placeholder='Name'

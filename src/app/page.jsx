@@ -1,5 +1,3 @@
-import { cookies } from 'next/headers';
-
 import LoginForm from '@/components/auth/LoginForm';
 
 const Home = async () => {
@@ -8,10 +6,10 @@ const Home = async () => {
       {/* message */}
       <section>
         <span className='font-bold md:text-6xl text-4xl text-blue-600'>
-          facebook
+          clonebook
         </span>
         <p className='md:text-2xl text-xl'>
-          Connect with friends and the world around you on Facebook.
+          Connect with friends and the world around you on Clonebook.
         </p>
       </section>
 
