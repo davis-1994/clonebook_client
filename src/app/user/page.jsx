@@ -1,11 +1,7 @@
-import { logout } from '@/actions/auth-actions';
+import PostForm from '@/components/user/PostForm';
 
 const Home = async () => {
-  return (
-    <div>
-      <button onClick={logout}>Logout</button>
-    </div>
-  );
+  return <PostForm />;
 };
 
 export default Home;

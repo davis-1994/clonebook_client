@@ -14,7 +14,9 @@ const Alert = ({ message, error }) => {
           error?.name ||
           error?.email ||
           error?.password ||
-          error?.confirmPassword}
+          error?.confirmPassword ||
+          error?.title ||
+          error?.body}
       </span>
     </div>
   );

@@ -1,4 +1,7 @@
 import Link from 'next/link';
+
+import { logout } from '@/actions/auth-actions';
+
 import Nav from './Nav';
 
 const Header = () => {
@@ -16,7 +19,11 @@ const Header = () => {
       <Nav />
 
       {/* user */}
-      <div>User</div>
+      <div>
+        <button onClick={logout} className='btn btn-primary btn-sm'>
+          Logout
+        </button>
+      </div>
     </div>
   );
 };
