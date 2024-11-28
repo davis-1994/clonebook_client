@@ -1,5 +1,6 @@
 'use client';
 
+import { redirect } from 'next/navigation';
 import { useActionState } from 'react';
 
 import { createPost } from '@/actions/post-actions';
@@ -9,9 +10,13 @@ import Alert from '@/components/general/Alert';
 const PostForm = () => {
   const [state, formAction, isPending] = useActionState(createPost, {});
 
+  if (state.success) {
+    redirect('/user');
+  }
+
   return (
     <form
-      className='flex justify-center items-center flex-col xs:gap-2 gap-1 rounded-md xs:max-w-[400px] bg-base-200 xs:p-3 p-1 shadow-md border border-neutral-300 mx-auto'
+      className='flex justify-center items-center flex-col xs:gap-2 gap-1 rounded-md w-full bg-base-200 xs:p-3 p-1 shadow-md border border-neutral-300 mx-auto'
       action={formAction}
     >
       <Alert message={state?.message} error={state?.error} />
